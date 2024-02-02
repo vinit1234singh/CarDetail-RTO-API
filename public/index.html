@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput">
+        <button type="submit">Upload</button>
+    </form>
+
+    <div id="message"></div>
+
+    <div id="vehicleInfo">
+        <!-- Data retrieved from API will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('image', document.getElementById('imageInput').files[0]);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                document.getElementById('message').innerText = data.message;
+
+                // Display data retrieved from API
+                if (data.vehicleInfo) {
+                    const vehicleInfo = data.vehicleInfo;
+                    const htmlContent = `
+                        <h2>Vehicle Information</h2>
+                        <p>Registration Number: ${vehicleInfo.reg_no}</p>
+                        <p>Registration Date: ${vehicleInfo.reg_date}</p>
+                        <p>Owner Name: ${vehicleInfo.owner_name}</p>
+                        <p>Model: ${vehicleInfo.model}</p>
+                        <p>Engine Number: ${vehicleInfo.engine_no}</p>
+                    `;
+                    document.getElementById('vehicleInfo').innerHTML = htmlContent;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
+
