@@ -83,9 +83,9 @@ async function callAPI(regNo, res) {
         url: 'https://rto-vehicle-information-verification-india.p.rapidapi.com/api/v1/rc/vehicleinfo',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': 'e1ac8769a9msh55a606d4fe723cfp1a7e06jsnebc563f9f45a',
+            'X-RapidAPI-Key': '952659701amsh985387c5fbd45eep1f2a80jsn53547a72f9fb',
             'X-RapidAPI-Host': 'rto-vehicle-information-verification-india.p.rapidapi.com'
-        },
+          },
         data: {
             reg_no: regNo,
             consent: 'Y',

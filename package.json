@@ -1,10 +1,11 @@
 {
   "name": "imagetotext",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the Car Plate Detection and Vehicle Information project! This project aims to detect car number plate from images or video feeds and fetch relevant vehicle information using API integration.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

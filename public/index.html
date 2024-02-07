@@ -1,23 +1,52 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Upload</title>
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1613835842551-894cdd236160?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Replace 'background-image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: white; /* Change text color for better visibility */
+        }
+
+        #uploadForm, #message, #vehicleInfo {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #uploadForm input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        #vehicleInfo {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Upload Image</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="image" id="imageInput">
-        <button type="submit">Upload</button>
-    </form>
+    <div>
+        <h1>Upload Image</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="image" id="imageInput">
+            <button type="submit">Upload</button>
+        </form>
 
-    <div id="message"></div>
+        <div id="message"></div>
 
-    <div id="vehicleInfo">
-        <!-- Data retrieved from API will be displayed here -->
+        <div id="vehicleInfo">
+            <!-- Data retrieved from API will be displayed here -->
+        </div>
     </div>
 
     <script>
@@ -56,4 +85,3 @@
     </script>
 </body>
 </html>
-

@@ -6,7 +6,7 @@ const fetchData = async () => {
     url: 'https://rto-vehicle-information-verification-india.p.rapidapi.com/api/v1/rc/vehicleinfo',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': 'cbf50ae500mshd23a178f6717f31p125d20jsn80cf7c151bb4',
+      'X-RapidAPI-Key': '952659701amsh985387c5fbd45eep1f2a80jsn53547a72f9fb',
       'X-RapidAPI-Host': 'rto-vehicle-information-verification-india.p.rapidapi.com'
     },
     data: {
