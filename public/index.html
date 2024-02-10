@@ -17,8 +17,17 @@
             padding: 0;
             color: white; /* Change text color for better visibility */
         }
-
-        #uploadForm, #message, #vehicleInfo {
+        #loader{
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #uploadForm, #message, #vehicleInfo,{
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve readability */
             padding: 20px;
@@ -31,11 +40,12 @@
 
         #vehicleInfo {
             margin-top: 20px;
-        }
+        }​
     </style>
 </head>
 <body>
     <div>
+        <div id="loader">VEHICLE INFO RTO</div>
         <h1>Upload Image</h1>
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="file" name="image" id="imageInput">
