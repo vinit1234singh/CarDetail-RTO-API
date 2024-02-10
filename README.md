@@ -3,3 +3,10 @@
 Welcome to the Car Plate Detection and Vehicle Information project! This project aims to detect car number plate from images or video feeds and fetch relevant vehicle information using API integration.
 
 
+
+SCREENSHOTS
+![FRONTEND](images/back.jpeg)
+
+
+
+
