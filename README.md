@@ -5,7 +5,16 @@ Welcome to the Car Plate Detection and Vehicle Information project! This project
 
 
 SCREENSHOTS
+
 ![FRONTEND](images/back.jpeg)
+
+
+![SAMPLE CAR](images/car.jpg)
+
+
+![CAR DETAILS AFTER IMAGE UPLOAD](images/cardetail.jpeg)
+
+
 
 
 
