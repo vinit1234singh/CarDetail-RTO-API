@@ -6,7 +6,7 @@ const Tesseract = require('tesseract.js');
 const axios = require('axios');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 app.use(express.json());
 
 // Set storage engine
